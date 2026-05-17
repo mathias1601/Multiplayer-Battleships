@@ -1,0 +1,13 @@
+{
+  "name": "battleships",
+  "version": "0.0.1",
+  "description": "Online battleships game server",
+  "type": "module",
+  "scripts": {
+    "server": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3"
+  }
+}
