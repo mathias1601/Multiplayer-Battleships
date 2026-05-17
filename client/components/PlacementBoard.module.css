@@ -1,0 +1,160 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 28rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.shipBtn {
+  min-width: 2.5rem;
+  padding: 0.4rem 0.65rem;
+  border: 2px solid #334155;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.shipBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.shipBtnSelected {
+  border-color: #0369a1;
+  background: #e0f2fe;
+}
+
+.toggleBtn,
+.actionBtn {
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #64748b;
+  background: #fff;
+  cursor: pointer;
+}
+
+.actionBtnPrimary {
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #0369a1;
+  background: #0284c7;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.actionBtnPrimary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 2px;
+  width: min(100%, 320px);
+  aspect-ratio: 1;
+  padding: 4px;
+  background: #0c4a6e;
+  border-radius: 8px;
+}
+
+.cell {
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 2px;
+  background: #e2e8f0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cell:disabled {
+  cursor: default;
+}
+
+.cellWater {
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 2px;
+  background: #e2e8f0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cellShip {
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 2px;
+  background: #475569;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cellPreviewOk {
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 2px;
+  background: #86efac;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cellPreviewBad {
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 2px;
+  background: #fca5a5;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.localError {
+  color: #b91c1c;
+  font-size: 0.9rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .shipBtn {
+    background: #1e293b;
+    color: #f8fafc;
+    border-color: #475569;
+  }
+
+  .shipBtnSelected {
+    background: #0c4a6e;
+    border-color: #38bdf8;
+  }
+
+  .toggleBtn,
+  .actionBtn {
+    background: #1e293b;
+    color: #f8fafc;
+    border-color: #475569;
+  }
+
+  .cellWater {
+    background: #334155;
+  }
+
+  .cellShip {
+    background: #94a3b8;
+  }
+
+  .hint {
+    color: #94a3b8;
+  }
+}
